@@ -15,13 +15,14 @@ class Login extends React.Component{
                                         <fieldset>
                                             <FormGroup label="Email: *" htmlFor="exampleInputEmail1">
                                                 <input type="email"
-                                                        id="exampleInputEmail1"
-                                                        placeholder="Digite o E-mail" />
+                                                       id="exampleInputEmail1"
+                                                       aria-describedby="emailHelp"
+                                                       placeholder="Digite o E-mail" />
                                             </FormGroup>
                                             <FormGroup label="Senha: *" htmlFor="exampleInputPassword1">
                                                 <input type="password"
-                                                        id="exampleInputPassword1"
-                                                        placeholder="Password" />
+                                                       id="exampleInputPassword1"
+                                                       placeholder="Password" />
                                             </FormGroup>
                                             <button className="btn btn-success">Entrar</button>
                                             <button className="btn btn-danger">Cadastrar</button>
