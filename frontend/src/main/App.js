@@ -1,6 +1,5 @@
 import React from 'react'
-import Login from '../views/login'
-import CadastroUsuario from '../views/cadastroUsuario'
+import Routes from './routes'
 
 import 'bootswatch/dist/flatly/bootstrap.css'
 import '../custom.css'
@@ -8,8 +7,8 @@ import '../custom.css'
 class App extends React.Component {
     render() {
         return(
-            <div>
-                <CadastroUsuario />
+            <div className="container">
+                <Routes />
             </div>
         )
     }
