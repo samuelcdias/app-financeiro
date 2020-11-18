@@ -1,9 +1,24 @@
 import React from 'react'
+import axios from 'axios'
 
 class Home extends React.Component{
   state = {
     saldo: 0
   }
+
+componentDidMount(){
+  const usuarioLogadoString = localStorage.getItem('_usuario_logado')
+  const ususarioLogado = JSON.parse(usuarioLogadoString)
+
+  console.log(ususarioLogado)
+
+  axios.get(`http://localhost:8080/api/usuarios/${ususarioLogado.id}/saldo`)
+    .then(response => {
+      this.setState({saldo: response.data})
+  }).catch( error => {
+    console.error(error.response)
+  })
+}
 
   render(){
     return(
