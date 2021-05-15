@@ -26,14 +26,14 @@ import org.springframework.data.domain.Example;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.gomes.minhasfinancas.exception.RegraNegocioException;
-import com.gomes.minhasfinancas.model.entity.Lancamento;
-import com.gomes.minhasfinancas.model.entity.Usuario;
-import com.gomes.minhasfinancas.model.enums.StatusLancamento;
-import com.gomes.minhasfinancas.model.enums.TipoLancamento;
-import com.gomes.minhasfinancas.model.repository.LancamentoRepository;
+import com.fatec.minhasfinancas.exception.RegraNegocioException;
+import com.fatec.minhasfinancas.model.entity.Lancamento;
+import com.fatec.minhasfinancas.model.entity.Usuario;
+import com.fatec.minhasfinancas.model.enums.StatusLancamento;
+import com.fatec.minhasfinancas.model.enums.TipoLancamento;
+import com.fatec.minhasfinancas.model.repository.LancamentoRepository;
+import com.fatec.minhasfinancas.service.impl.LancamentoServiceImpl;
 import com.gomes.minhasfinancas.model.repository.LancamentoRepositoryTest;
-import com.gomes.minhasfinancas.service.impl.LancamentoServiceImpl;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")

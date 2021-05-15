@@ -2,6 +2,9 @@ package com.gomes.minhasfinancas.model.repository;
 
 import java.util.Optional;
 
+import com.fatec.minhasfinancas.model.entity.Usuario;
+import com.fatec.minhasfinancas.model.repository.UsuarioRepository;
+
 import org.junit.jupiter.api.Test;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,8 +15,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import com.gomes.minhasfinancas.model.entity.Usuario;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")

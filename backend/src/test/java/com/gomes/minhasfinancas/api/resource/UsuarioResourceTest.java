@@ -18,13 +18,14 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.gomes.minhasfinancas.api.dto.UsuarioDTO;
-import com.gomes.minhasfinancas.exception.ErroAutenticacao;
-import com.gomes.minhasfinancas.exception.RegraNegocioException;
-import com.gomes.minhasfinancas.model.entity.Usuario;
-import com.gomes.minhasfinancas.service.LancamentoService;
-import com.gomes.minhasfinancas.service.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fatec.minhasfinancas.api.dto.UsuarioDTO;
+import com.fatec.minhasfinancas.api.resource.UsuarioResource;
+import com.fatec.minhasfinancas.exception.ErroAutenticacao;
+import com.fatec.minhasfinancas.exception.RegraNegocioException;
+import com.fatec.minhasfinancas.model.entity.Usuario;
+import com.fatec.minhasfinancas.service.LancamentoService;
+import com.fatec.minhasfinancas.service.UsuarioService;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")

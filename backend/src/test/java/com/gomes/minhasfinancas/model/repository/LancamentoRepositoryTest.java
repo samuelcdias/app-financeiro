@@ -6,6 +6,11 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Optional;
 
+import com.fatec.minhasfinancas.model.entity.Lancamento;
+import com.fatec.minhasfinancas.model.enums.StatusLancamento;
+import com.fatec.minhasfinancas.model.enums.TipoLancamento;
+import com.fatec.minhasfinancas.model.repository.LancamentoRepository;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +20,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import com.gomes.minhasfinancas.model.entity.Lancamento;
-import com.gomes.minhasfinancas.model.enums.StatusLancamento;
-import com.gomes.minhasfinancas.model.enums.TipoLancamento;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest

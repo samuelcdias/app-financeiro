@@ -2,6 +2,12 @@ package com.gomes.minhasfinancas.service;
 
 import java.util.Optional;
 
+import com.fatec.minhasfinancas.exception.ErroAutenticacao;
+import com.fatec.minhasfinancas.exception.RegraNegocioException;
+import com.fatec.minhasfinancas.model.entity.Usuario;
+import com.fatec.minhasfinancas.model.repository.UsuarioRepository;
+import com.fatec.minhasfinancas.service.impl.UsuarioServiceImpl;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,12 +16,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import com.gomes.minhasfinancas.exception.ErroAutenticacao;
-import com.gomes.minhasfinancas.exception.RegraNegocioException;
-import com.gomes.minhasfinancas.model.entity.Usuario;
-import com.gomes.minhasfinancas.model.repository.UsuarioRepository;
-import com.gomes.minhasfinancas.service.impl.UsuarioServiceImpl;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
