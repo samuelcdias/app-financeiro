@@ -1,16 +1,20 @@
 import React from "react";
-import Login from "../views/Login";
-import CadastroUsuario from "../views/CadastroUsuario";
+import Routes from "./routes";
 
 import "../custom.css";
+import "primeicons/primeicons.css";
 import "bootswatch/dist/flatly/bootstrap.css";
+import Navbar from "../components/Navbar";
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <CadastroUsuario />
-      </div>
+      <>
+        <Navbar />
+        <div>
+          <Routes />
+        </div>
+      </>
     );
   }
 }
