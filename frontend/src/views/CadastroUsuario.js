@@ -3,7 +3,15 @@ import Card from "../components/Card";
 import FormGroup from "../components/FormGroup";
 import { withRouter } from "react-router-dom";
 
+import UsuarioService from "../app/service/usuarioService";
+import { mensagemSucesso, mensagemErro } from "../components/Toastr";
+
 class CadastroUsuario extends React.Component {
+  constructor() {
+    super();
+    this.service = new UsuarioService();
+  }
+
   state = {
     nome: "",
     email: "",
@@ -11,9 +19,32 @@ class CadastroUsuario extends React.Component {
     senhaRepeticao: "",
   };
 
+  validar() {
+    const msgs = [];
+    const emailRegExp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]/;
+    if (!this.state.name) {
+      msgs.push("O campo Nome é obrigatório.");
+    }
+
+    if (!this.state.email) {
+      msgs.push("O campo Email é obrigatório.");
+    } else if (!this.state.email.match(emailRegExp)) {
+      msgs.push("Informe um Email válido.");
+    }
+
+    if (!this.state.senha || !this.state.senhaRepeticao) {
+      msgs.push("Digite a senha 2x");
+    } else if (this.state.senha !== this.state.senhaRepeticao) {
+      msgs.push("As senhas não conferem.");
+    }
+
+    return msgs;
+  }
+
   cadastrar = () => {
     console.log(this.state);
   };
+
   cancelar = () => {
     this.props.history.push("/login");
   };

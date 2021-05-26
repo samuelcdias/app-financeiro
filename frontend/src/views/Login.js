@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 
 import UsuarioService from "../app/service/usuarioService";
 import LocalStorageService from "../app/service/localStorageService";
+import { mensagemErro } from "../components/Toastr";
 
 class Login extends React.Component {
   constructor() {
@@ -15,7 +16,6 @@ class Login extends React.Component {
   state = {
     email: "",
     senha: "",
-    mensagemErro: null,
   };
 
   entrar = () => {
@@ -29,10 +29,8 @@ class Login extends React.Component {
         this.props.history.push("/home");
       })
       .catch((erro) => {
-        this.setState({ mensagemErro: erro.response.data });
+        mensagemErro(erro.data);
       });
-    console.log("Email: ", this.state.email);
-    console.log("Senha: ", this.state.senha);
   };
 
   prepareCadastrar = () => {
@@ -50,7 +48,6 @@ class Login extends React.Component {
             <div className="bs-docs-section">
               <Card title="Login">
                 <div className="row">
-                  <span> {this.state.mensagemErro}</span>
                   <div className="col-lg-12">
                     <div className="bs-component">
                       <fieldset>
